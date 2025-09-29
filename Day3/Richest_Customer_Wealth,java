@@ -1,0 +1,14 @@
+class Solution {
+    public int maximumWealth(int[][] accounts) {
+        int max=0;
+        for(int row=0; row<accounts.length; row++){
+            int total=0;
+            for(int col=0; col<accounts[0].length; col++){
+                total+=accounts[row][col];
+            }
+            max=Math.max(total,max);
+        }
+        return max;
+        
+    }
+}
